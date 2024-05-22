@@ -9,14 +9,21 @@ if (localStorage.getItem("hottels") == null) {
   display();
 }
 function submit() {
-  var hottel = {
-    hottelName: siteNameInput.value,
-    hottelUrl: siteUrlInput.value,
-  };
-  hottelBooked.push(hottel);
-  localStorage.setItem("hottels", JSON.stringify(hottelBooked));
-  clear();
-  display();
+   if (
+    siteNameInput.classList.contains("is-valid") &&
+    siteUrlInput.classList.contains("is-valid")
+  ) {
+    var hottel = {
+      hottelName: siteNameInput.value,
+      hottelUrl: siteUrlInput.value,
+    };
+    hottelBooked.push(hottel);
+    localStorage.setItem("hottels", JSON.stringify(hottelBooked));
+    clear();
+    display();
+  } else {
+    alert("Not valed Data");
+  }
 }
 function clear() {
   siteNameInput.value = null;
