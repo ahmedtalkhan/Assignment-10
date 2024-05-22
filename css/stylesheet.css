@@ -1,0 +1,19 @@
+section {
+  background-color: #f7ecde;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+.d-one {
+  border-bottom: 2px dotted black;
+}
+button {
+  background-color: rgb(226, 99, 15) !important;
+}
+h2 {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
